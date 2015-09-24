@@ -1,0 +1,972 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>game-portal</title>
+        <link href="styles/bootstrap.css" rel="stylesheet">
+        <link href="styles/style.css" rel="stylesheet">
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+        <script src="scripts/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $(".screen").click(function(){
+                    $("#newModal").modal('show');
+                });
+            })
+        </script>
+    </head>
+    <!-- Fixes Navigation Bar with drop down menu
+    ==========================================================  -->
+    <body class = "main">
+    <div id="wrap">
+        <!-- Sidebar -->
+        <div class = "sidebar-wrap">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                    <a href="#">
+                        GA.ME
+                    </a>
+                </li>
+                <li><a href="index.html">Dashboard</a></li>
+                <li><a href="http://facebook.com/turbulenz" target="_blank">
+                    <div class="">sign in with facebook</div>
+                </a>
+                </li>
+                <li><a href="https://accounts.google.com/ServiceLogin?service=mail&continue=https://mail.google.com/mail/&hl=uk" target="_blank">sign in with google+</a></li>
+                <li><a href="https://api.twitter.com/oauth/authenticate?oauth_token=m2nvSgAAAAAAHJlQAAABTpK75EY" target="_blank">sign in with twitter</a></li>
+                <li><a data-toggle="modal" data-target="#exampleModal">sign in with username</a></li>
+                <li><a data-toggle="modal" data-target="#exampleModalSecond">create new account</a></li>
+            </ul>
+        </div>
+        <div class = "page-content-wrap">
+            <div id="row">
+                <nav class="navb navbar-default navb-fixed-top head">
+                    <div class="navbar-header">
+                        <a class="navbar-brand logoS" href="#"></a>
+                        <a id = "buttonBar" class="navbar-brand" href="#"></a>
+                    </div>
+                    <div>
+                        <ul class="nav navbar-nav navbar-rightSecond">
+                            <li>
+                                <a class = "signBlock signButton" data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap">SIGN IN</a>
+                                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal">×</button>
+                                        </div>
+                                        <ul class="nav nav-tabs">
+                                            <li class="active separ"><a data-toggle="pill" href="#home">SING IN</a></li>
+                                            <li class = "separ"><a data-toggle="pill" href="#menu1">NEW USER</a></li>
+                                            <li class = "separ"><a data-toggle="pill" href="#menu2">FORGOT</a></li>
+                                        </ul>
+                                        <!--  SIGN IN  -->
+                                        <div class = "tab-content">
+                                            <div id="home" class="tab-pane fade in active">
+                                                <div class="control-group">
+                                                    <div class = "login-social">
+                                                        <div class = "modal-fb">
+                                                            <i class = "fa fa-facebook fa-lg"></i>
+                                                            sign in
+                                                        </div>
+                                                        <div class = "modal-tw">
+                                                            <i class = "fa fa-twitter fa-lg"></i>
+                                                            sign in
+                                                        </div>
+                                                        <div class = "modal-gg">
+                                                            <i class = "fa fa-google fa-lg"></i>
+                                                            sign in
+                                                        </div>
+                                                    </div>
+                                                    <hr/>
+                                                    <div class = "modal-contents">
+                                                        <form role="form">
+                                                            <div class="form-group">
+                                                                <label class="control-label">sign in</label>
+                                                                <input type="text" class="form-control" placeholder="Username or email" required/>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label class="control-label">password</label>
+                                                                <input type="password" class="form-control" data-minlength="6" placeholder="•••••••••••" required/>
+                                                                <span class="help-block">Minimum of 6 characters</span>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <div class="checkbox">
+                                                                    <label>
+                                                                        <input type="checkbox" required checked>
+                                                                        <span class = "span" tabindex="1">keep me signed in</span>
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                            <hr class = "hrSecond"/>
+                                                            <div class="form-group">
+                                                                <button type="submit" class="btn btn-primary">SIGN IN</button>
+                                                            </div>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--  NEW USER  -->
+                                            <div id="menu1" class="tab-pane fade">
+                                                <div class = "login-info">
+                                                    Play using an existing Facebook, Twitter or Google account
+                                                </div>
+                                                <div class = "login-social">
+                                                    <div class = "modal-fb">
+                                                        <i class = "fa fa-facebook fa-lg"></i>
+                                                        sign up
+                                                    </div>
+                                                    <div class = "modal-tw">
+                                                        <i class = "fa fa-twitter fa-lg"></i>
+                                                        sign up
+                                                    </div>
+                                                    <div class = "modal-gg">
+                                                        <i class = "fa fa-google fa-lg"></i>
+                                                        sign up
+                                                    </div>
+                                                </div>
+                                                <hr/>
+                                                <div class = "modal-contents-noborder">
+                                                    <div class = "info-text">
+                                                        Or get started with just a username
+                                                    </div>
+                                                    <div class = "terms-text">
+                                                        I am over 13 and accept the
+                                                    </div>
+                                                </div>
+                                                <div class = "modal-contents-noborder blockPlay">
+                                                    <div class = "username-input">
+                                                        <input type="text" class = "ng-dirty" placeholder="Choose a username"/>
+                                                        <div class = "finished">
+                                                            <span>Let's Play</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <hr/>
+                                            </div>
+                                            <!--  FORGOT  -->
+                                            <div id="menu2" class="tab-pane fade">
+                                                <div class = "login-info-Second">
+                                                    If you forgot your password, enter your email address here and we'll send you a recovery password
+                                                </div>
+                                                <div class = "modal-contents">
+                                                    <form role="form">
+                                                        <div class="form-group">
+                                                            <label class="control-label">email</label>
+                                                            <input type="text" class="form-control" placeholder="Enter your ga.me account email" required/>
+                                                        </div>
+                                                        <hr class = "hrSecond"/>
+                                                        <div class="form-group">
+                                                            <button type="submit" class="btn btn-primary">SEND</button>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li><a class = "gav" href="http://facebook.com/turbulenz" target="_blank"><i class="fa fa-facebook-official fa-2x"></i></a></li>
+                            <li><a class = "gav" href="https://accounts.google.com/ServiceLogin?service=mail&continue=https://mail.google.com/mail/&hl=uk" target="_blank"><i class="fa fa-google-plus-square fa-2x"></i></a></li>
+                            <li><a class = "gav" href="https://api.twitter.com/oauth/authenticate?oauth_token=nuctqwAAAAAAHJlQAAABTpDkNFc" target="_blank"><i class="fa fa-twitter fa-2x"></i></a></li>
+                            <li>
+                                <a class = "buttonRightSecond" data-toggle="modal" data-target="#exampleModalSecond">
+                                    <button class = "btn btn-success">
+                                        SIGN UP
+                                    </button>
+                                </a>
+                                <div class="modal fade" id="exampleModalSecond" tabindex="-1">
+                                    <div class="modal-dialog">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal">×</button>
+                                        </div>
+                                        <ul class="nav nav-tabs">
+                                            <li class = "separ"><a data-toggle="pill" href="#homeS">SING IN</a></li>
+                                            <li class="active separ"><a data-toggle="pill" href="#menu1S">NEW USER</a></li>
+                                            <li class = "separ"><a data-toggle="pill" href="#menu2">FORGOT</a></li>
+                                        </ul>
+                                        <!--  SIGN IN  -->
+                                        <div class = "tab-content">
+                                            <div id="homeS" class="tab-pane fade">
+                                                <div class="control-group">
+                                                    <div class = "login-social">
+                                                        <div class = "modal-fb">
+                                                            <i class = "fa fa-facebook fa-lg"></i>
+                                                            sign in
+                                                        </div>
+                                                        <div class = "modal-tw">
+                                                            <i class = "fa fa-twitter fa-lg"></i>
+                                                            sign in
+                                                        </div>
+                                                        <div class = "modal-gg">
+                                                            <i class = "fa fa-google fa-lg"></i>
+                                                            sign in
+                                                        </div>
+                                                    </div>
+                                                    <hr/>
+                                                    <div class = "modal-contents">
+                                                        <form role="form">
+                                                            <div class="form-group">
+                                                                <label class="control-label">sign in</label>
+                                                                <input type="text" class="form-control" placeholder="Username or email" required/>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label class="control-label">password</label>
+                                                                <input type="password" class="form-control" data-minlength="6" placeholder="•••••••••••" required/>
+                                                                <span class="help-block">Minimum of 6 characters</span>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <div class="checkbox">
+                                                                    <label>
+                                                                        <input type="checkbox" data-error="Before you wreck yourself" required checked>
+                                                                        <span class = "span" tabindex="1">keep me signed in</span>
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                            <hr class = "hrSecond"/>
+                                                            <div class="form-group">
+                                                                <button type="submit" class="btn btn-primary">SIGN IN</button>
+                                                            </div>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--  NEW USER  -->
+                                            <div id="menu1S" class="tab-pane fade in active">
+                                                <div class = "login-info">
+                                                    Play using an existing Facebook, Twitter or Google account
+                                                </div>
+                                                <div class = "login-social">
+                                                    <div class = "modal-fb">
+                                                        <i class = "fa fa-facebook fa-lg"></i>
+                                                        sign up
+                                                    </div>
+                                                    <div class = "modal-tw">
+                                                        <i class = "fa fa-twitter fa-lg"></i>
+                                                        sign up
+                                                    </div>
+                                                    <div class = "modal-gg">
+                                                        <i class = "fa fa-google fa-lg"></i>
+                                                        sign up
+                                                    </div>
+                                                </div>
+                                                <hr/>
+                                                <div class = "modal-contents-noborder">
+                                                    <div class = "info-text">
+                                                        Or get started with just a username
+                                                    </div>
+                                                    <div class = "terms-text">
+                                                        I am over 13 and accept the
+                                                    </div>
+                                                </div>
+                                                <div class = "modal-contents-noborder">
+                                                    <div class = "username-input">
+                                                        <input type="text" class = "ng-dirty" placeholder="Choose a username"/>
+                                                        <div class = "finished">
+                                                            <span>Let's Play</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <hr/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+                </div>
+            </div>
+        </div>
+        <div id="wrapFirst">
+            <!-- Sidebar -->
+            <div class = "sidebar-wrapFirst">
+                <ul class="sidebar-nav">
+                    <li class="sidebar-brand">
+                        <div class = "headBrand">
+                            <a class = "a_brandFirst" href="#">
+                                <div class = "brandFirst">
+                                    <div class = "insideBrand">
+                                    </div>
+                                </div>
+                            </a>
+                            <div class = "brandSecond">
+                                <span class = "overlay-header-separator"></span>
+                            </div>
+                            <div class = "brandThird">
+                                    <span class = "overlay-title">GLOBAL FEED</span>
+                            </div>
+                            <div class = "brandSecond">
+                                <span class = "overlay-header-separator"></span>
+                            </div>
+                            <a id = "closeFirst" href="#">
+                                <div class = "brandForth">
+                                    <div class = "closeInside">
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <form class = "feed-input-form">
+                            <div class = "insideForm">
+                                <textarea class = "feed-input-box" onkeyup="auto_grow(this)" maxlength="200"></textarea>
+                                <a href=""></a><div class = "postButtonNew"><span class = "overlay-postSecond">Let's Play</span></div>
+                            </div>
+                        </form>
+                    </li>
+                    <div class = "hey">
+                        <li class="left clearfix max">
+                            <a class = "screen"><span class="chat-img pull-left"><img src = "images/faceSmall.png" alt="User Avatar" class="img-circle">
+                            </span></a>
+                            <div class="chat-body clearfix">
+                                <div class="head">
+                                    <strong class="primary-font"><a class = "screen">Elly Lee</a>
+                                    </strong>
+                                </div>
+                                <p>
+                                    hey I'm new here
+                                </p>
+                                <span class="glyphicon glyphicon-time new"><smal>Replay</smal><smal class = "maka">0 days</smal></span>
+                            </div>
+
+                            <div class="modal fade wrapFirst" id="newModal">
+                                <div class = "modal-dialog sidebar-wrapFirstNew">
+                                    <ul class="modal-headerNew sidebar-nav">
+                                        <li class="sidebar-brand">
+                                            <div class = "headBrand">
+                                                <div class = "brandThird">
+                                                    <span class = "overlay-titleNew"><img src = "images/face.png" class="img-circle"></span>
+                                                </div>
+                                                <div class = "brandSecondNew">
+                                                    <span class = "overlay-header-separator"></span>
+                                                </div>
+                                                <a id = "closeSecondNew" href="#">
+                                                    <div class = "brandForth">
+                                                        <div class = "closeInsideNew">
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                                <div class = "brandThirdNew">
+                                                    <p class = "underImage">Elly Lee</p>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class = "backgroundFirstNew">Player Feed</div>
+                                        </li>
+                                        <li>
+                                            <form class = "feed-input-formNew">
+                                                <div class = "insideForm">
+                                                    <textarea class = "feed-input-box" onkeyup="auto_grow(this)" maxlength="200"></textarea>
+                                                    <a href=""></a><div class = "postButton"><span class = "overlay-postFirst">POST</span></div>
+                                                </div>
+                                            </form>
+                                        </li>
+                                        <div class = "hey">
+                                            <li class="left clearfix max">
+                    <span class="chat-img pull-left"><img src = "images/faceSmall.png" alt="User Avatar" class="img-circle">
+                            </span>
+                                                <div class="chat-body clearfix">
+                                                    <div class="head">
+                                                        <strong class="primary-font"><a class = "screen">Elly Lee</a>
+                                                        </strong>
+                                                    </div>
+                                                    <p>
+                                                        hey I'm new here
+                                                    </p>
+                                                    <span class="glyphicon glyphicon-time new"><smal>Replay</smal><smal class = "maka">0 days</smal></span>
+                                                </div>
+                                            </li>
+                                            <li class="left clearfix max">
+                    <span class="chat-img pull-left"><img src = "images/faceSmall.png" alt="User Avatar" class="img-circle">
+                            </span>
+                                                <div class="chat-body clearfix">
+                                                    <div class="head">
+                                                        <strong class="primary-font">Elly Lee</strong>
+                                                    </div>
+                                                    <p>
+                                                        hey I'm new here
+                                                    </p>
+                                                    <span class="glyphicon glyphicon-time new"><smal>Replay</smal><smal class = "maka">0 days</smal></span>
+                                                </div>
+                                            </li>
+                                            <li class="left clearfix max">
+                    <span class="chat-img pull-left"><img src = "images/faceSmall.png" alt="User Avatar" class="img-circle">
+                            </span>
+                                                <div class="chat-body clearfix">
+                                                    <div class="head">
+                                                        <strong class="primary-font">Elly Lee</strong>
+                                                    </div>
+                                                    <p>
+                                                        hey I'm new here
+                                                    </p>
+                                                    <span class="glyphicon glyphicon-time new"><smal>Replay</smal><smal class = "maka">0 days</smal></span>
+                                                </div>
+                                                <div class = "overBox"><img src="images/box.png" alt=""/></div>
+                                            </li>
+                                            <li class="left clearfix max">
+                    <span class="chat-img pull-left"><img src = "images/faceSmall.png" alt="User Avatar" class="img-circle">
+                            </span>
+                                                <div class="chat-body clearfix">
+                                                    <div class="head">
+                                                        <strong class="primary-font">Elly Lee</strong>
+                                                    </div>
+                                                    <p>
+                                                        hey I'm new here
+                                                    </p>
+                                                    <span class="glyphicon glyphicon-time new"><smal>Replay</smal><smal class = "maka">0 days</smal></span>
+                                                </div>
+                                            </li>
+                                        </div>
+                                    </ul>
+                                    <div class = "rightBarNew">
+                                        <ul class="nav navbar-nav pull-rightNew">
+                                            <li class = "navSec each"><a class = "buttonFirstNew"></a>
+                                            </li>
+                                            <li class = "navSec each"><a class = "buttonThirdNew"></a>
+                                            </li>
+                                            <li class = "navSec eachDifNew"><a class = "buttonFifthNew"></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="modal fade wrapFirst" id="newFirstModal">
+                                <div class = "modal-dialog sidebar-wrapFirstNew">
+                                    <ul class="modal-headerNew sidebar-nav">
+                                        <li class="sidebar-brand">
+                                            <div class = "headBrand">
+                                                <div class = "brandThird">
+                                                    <span class = "overlay-titleNew"><img src = "images/face.png" alt="User Avatar" class="img-circle"></span>
+                                                </div>
+                                                <div class = "brandSecondNew">
+                                                    <span class = "overlay-header-separator"></span>
+                                                </div>
+                                                <a id = "closeFirstNew" href="#">
+                                                    <div class = "brandForth">
+                                                        <div class = "closeInsideNew">
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                                <div class = "brandThirdNew">
+                                                    <p class = "underImage">Elly Lee</p>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class = "backgroundFirst"></div>
+                                        </li>
+                                        <li>
+                                            <span class="chat-img pull-left"><img src = "images/yellow.png" alt="User Avatar" class="img-circle">
+                                            </span>
+                                            <div class="chat-body clearfix lap">
+                                                <div class="headSecond">
+                                                    <strong class="primary-font">Denki Word Quest</strong>
+                                                </div>
+                                            </div>
+                                            <span class = "denkiSpan"><img src = "images/circ.png" class="img-circle">
+                                            </span>
+                                        </li>
+                                    </ul>
+                                    <div class = "rightBarNew">
+                                        <ul class="nav navbar-nav pull-rightNew">
+                                            <li class = "navSec each"><a class = "buttonFirstNew"></a>
+                                            </li>
+                                            <li class = "navSec each"><a class = "buttonThirdNew"></a>
+                                            </li>
+                                            <li class = "navSec eachDifNew"><a class = "buttonFifthNew"></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="modal fade wrapFirst" id="newSecondModal">
+                                <div class = "modal-dialog sidebar-wrapFirstNew">
+                                    <ul class="modal-headerNew sidebar-nav">
+                                        <li class="sidebar-brand">
+                                            <div class = "headBrand">
+                                                <div class = "brandThird">
+                                                    <span class = "overlay-titleNew"><img src = "images/face.png" alt="User Avatar" class="img-circle"></span>
+                                                </div>
+                                                <div class = "brandSecondNew">
+                                                    <span class = "overlay-header-separator"></span>
+                                                </div>
+                                                <a id = "closeThirdNew" href="#">
+                                                    <div class = "brandForth">
+                                                        <div class = "closeInsideNew">
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                                <div class = "brandThirdNew">
+                                                    <p class = "underImage">Elly Lee</p>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class = "backgroundFirstSecond">Badges</div>
+                                        </li>
+                                        <div class = "heyNewSecondNew">
+                                            <a class = "kozelNew" href="http://facebook.com/turbulenz" target="_blank">
+                                                <li class="left clearfix maxNewSecond">
+                    <span class="chat-img pull-left"><i class = "fa fa-facebook-official fa-2x iconFace"></i>
+                            </span>
+                                                    <div class="chat-body clearfix">
+                                                        <div class="headNew">
+                                                            <strong class="primary-font strongToFace">SHARE TO FACEBOOK</strong>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            </a>
+                                            <a class = "kozelNew" href="https://api.twitter.com/oauth/authenticate?oauth_token=m2nvSgAAAAAAHJlQAAABTpK75EY" target="_blank">
+                                                <li class="left clearfix maxNewSecond">
+                    <span class="chat-img pull-left"><i class = "fa fa-twitter-square fa-2x iconTwitter"></i>
+                                                        </span>
+                                                        <div class="chat-body clearfix">
+                                                        <div class="headNew">
+                                                            <strong class="primary-font strongToFace">SHARE TO TWITTER</strong>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            </a>
+                                            <a class = "kozelNew" href="https://accounts.google.com/ServiceLogin?service=mail&continue=https://mail.google.com/mail/&hl=uk" target="_blank">
+                                                <li class="left clearfix maxNewSecond">
+                    <span class="chat-img pull-left"><i class = "fa fa-google-plus-square fa-2x iconFace"></i>
+                            </span>
+                                                    <div class="chat-body clearfix">
+                                                        <div class="headNew">
+                                                            <strong class="primary-font strongToFace">SHARE TO Google+</strong>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            </a>
+                                        </div>
+                                    </ul>
+                                    <div class = "rightBarNew">
+                                        <ul class="nav navbar-nav pull-rightNew">
+                                            <li class = "navSec each"><a class = "buttonFirstNew"></a>
+                                            </li>
+                                            <li class = "navSec each"><a class = "buttonThirdNew"></a>
+                                            </li>
+                                            <li class = "navSec eachDifNew"><a class = "buttonFifthNew"></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!----  The End  of Modal   ------>
+                        </li>
+                        <li class="left clearfix max">
+                            <a class = "screen"><span class="chat-img pull-left"><img src = "images/faceSmall.png" alt="User Avatar" class="img-circle">
+                            </span></a>
+                            <div class="chat-body clearfix">
+                                <div class="head">
+                                    <strong class="primary-font"><a class = "screen">Elly Lee</a></strong>
+                                </div>
+                                <p>
+                                    hey I'm new here
+                                </p>
+                                <span class="glyphicon glyphicon-time new"><smal>Replay</smal><smal class = "maka">0 days</smal></span>
+                            </div>
+                        </li>
+                        <li class="left clearfix max">
+                            <a class = "screen"><span class="chat-img pull-left"><img src = "images/faceSmall.png" alt="User Avatar" class="img-circle">
+                            </span></a>
+                            <div class="chat-body clearfix">
+                                <div class="head">
+                                    <strong class="primary-font"><a class = "screen">Elly Lee</a></strong>
+                                </div>
+                                <p>
+                                    hey I'm new here
+                                </p>
+                                <span class="glyphicon glyphicon-time new"><smal>Replay</smal><smal class = "maka">0 days</smal></span>
+                            </div>
+                        </li>
+                        <li class="left clearfix max">
+                            <a class = "screen"><span class="chat-img pull-left"><img src = "images/faceSmall.png" alt="User Avatar" class="img-circle">
+                            </span></a>
+                            <div class="chat-body clearfix">
+                                <div class="head">
+                                    <strong class="primary-font"><a class = "screen">Elly Lee</a></strong>
+                                </div>
+                                <p>
+                                    hey I'm new here
+                                </p>
+                                <span class="glyphicon glyphicon-time new"><smal>Replay</smal><smal class = "maka">0 days</smal></span>
+                            </div>
+                        </li>
+                        <li class="left clearfix max">
+                            <a class = "screen"><span class="chat-img pull-left"><img src = "images/faceSmall.png" alt="User Avatar" class="img-circle">
+                            </span></a>
+                            <div class="chat-body clearfix">
+                                <div class="head">
+                                    <strong class="primary-font"><a class = "screen">Elly Lee</a></strong>
+                                </div>
+                                <p>
+                                    hey I'm new here
+                                </p>
+                                <span class="glyphicon glyphicon-time new"><smal>Replay</smal><smal class = "maka">0 days</smal></span>
+                            </div>
+                        </li>
+                    </div>
+                </ul>
+            </div>
+        </div>
+        <div id="wrapSecond">
+            <!-- Sidebar -->
+            <div class = "sidebar-wrapSecond">
+                <ul class="sidebar-nav">
+                    <li class="sidebar-brand">
+                        <div class = "headBrand">
+                            <a class = "a_brandFirst" href="#">
+                                <div class = "brandFirst">
+                                    <div class = "insideBrand">
+                                    </div>
+                                </div>
+                            </a>
+                            <div class = "brandSecond">
+                                <span class = "overlay-header-separator"></span>
+                            </div>
+                            <div class = "brandThird">
+                                <span class = "overlay-title">XP Gained</span>
+                            </div>
+                            <div class = "brandSecond">
+                                <span class = "overlay-header-separator"></span>
+                            </div>
+                            <a id = "closeSecond" href="#">
+                                <div class = "brandForth">
+                                    <div class = "closeInside">
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </li>
+                    <div class = "hey">
+                        <li class="left clearfix max">
+                    <span class="chat-img pull-left spanCircle"><img src = "images/circle.png" alt="User Avatar" class="img-circle">
+                            </span>
+                            <div class="chat-bodyha clearfixha">
+                                <div class = "secondHead">
+                                        <div class="place"><span>1st</span></div>
+                                        <strong class="name">Elly Lee</strong>
+                                        <div class="price"><span class= "priceText">31.055</span></div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="left clearfix max">
+                    <span class="chat-img pull-left spanCircle"><img src = "images/circle.png" alt="User Avatar" class="img-circle">
+                            </span>
+                            <div class="chat-bodyha clearfixha">
+                                <div class = "secondHead">
+                                    <div class="place"><span>2nd</span></div>
+                                    <strong class="name">Brad Pitt</strong>
+                                    <div class="price"><span class= "priceText">10.570</span></div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="left clearfix max">
+                    <span class="chat-img pull-left spanCircle"><img src = "images/circle.png" alt="User Avatar" class="img-circle">
+                            </span>
+                            <div class="chat-bodyha clearfixha">
+                                <div class = "secondHead">
+                                    <div class="place"><span>3rd</span></div>
+                                    <strong class="name">Wendy Shai</strong>
+                                    <div class="price"><span class= "priceText">10.428</span></div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="left clearfix max">
+                    <span class="chat-img pull-left spanCircle"><img src = "images/circle.png" alt="User Avatar" class="img-circle">
+                            </span>
+                            <div class="chat-bodyha clearfixha">
+                                <div class = "secondHead">
+                                    <div class="place"><span>4th</span></div>
+                                    <strong class="name">Chanel</strong>
+                                    <div class="price"><span class= "priceText">9.628</span></div>
+                                </div>
+                            </div>
+                        </li>
+                    </div>
+                </ul>
+            </div>
+        </div>
+        <div id="wrapThird">
+            <div class = "sidebar-wrapThird">
+                <ul class="sidebar-nav">
+                    <li class="sidebar-brand">
+                        <div class = "headBrand">
+                            <a class = "a_brandFirst" href="#">
+                                <div class = "brandFirst">
+                                    <div class = "insideBrand">
+                                    </div>
+                                </div>
+                            </a>
+                            <div class = "brandSecond">
+                                <span class = "overlay-header-separator"></span>
+                            </div>
+                            <div class = "brandThird">
+                                <span class = "overlay-title">Batches</span>
+                            </div>
+                            <div class = "brandSecond">
+                                <span class = "overlay-header-separator"></span>
+                            </div>
+                            <a id = "closeThird" href="#">
+                                <div class = "brandForth">
+                                    <div class = "closeInside">
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class = "backgroundSecond">Not Yet Achieved</div>
+                    </li>
+                    <div class = "hey">
+                        <li class="left clearfix max">
+                    <span class="chat-img pull-left"><img src = "images/circ.png" alt="User Avatar" class="img-circle">
+                            </span>
+                            <div class="chat-body clearfix">
+                                <div class="head">
+                                    <strong class="primary-font">Quest Test</strong>
+                                </div>
+                                <p>
+                                    Default the Ultimate Boss
+                                </p>
+                            </div>
+                        </li>
+                        <li class="left clearfix max">
+                    <span class="chat-img pull-left"><img src = "images/circ.png" alt="User Avatar" class="img-circle">
+                            </span>
+                            <div class="chat-body clearfix">
+                                <div class="head">
+                                    <strong class="primary-font">Size Matters</strong>
+                                </div>
+                                <p>
+                                    Default the Ultimate Boss
+                                </p>
+                            </div>
+                        </li>
+                        <li class="left clearfix max">
+                    <span class="chat-img pull-left"><img src = "images/circ.png" alt="User Avatar" class="img-circle">
+                            </span>
+                            <div class="chat-body clearfix">
+                                <div class="head">
+                                    <strong class="primary-font">Magic Stick</strong>
+                                </div>
+                                <p>
+                                    Default the Ultimate Boss
+                                </p>
+                            </div>
+                        </li>
+                    </div>
+                </ul>
+            </div>
+        </div>
+        <div id="wrapForth">
+            <div class = "sidebar-wrapForth">
+                <ul class="sidebar-nav">
+                    <li class="sidebar-brand">
+                        <div class = "headBrand">
+                            <a class = "a_brandFirst" href="#">
+                                <div class = "brandFirst">
+                                    <div class = "insideBrand">
+                                    </div>
+                                </div>
+                            </a>
+                            <div class = "brandSecond">
+                                <span class = "overlay-header-separator"></span>
+                            </div>
+                            <div class = "brandThird">
+                                <span class = "overlay-title">Store</span>
+                            </div>
+                            <div class = "brandSecond">
+                                <span class = "overlay-header-separator"></span>
+                            </div>
+                            <a id = "closeForth" href="#">
+                                <div class = "brandForth">
+                                    <div class = "closeInside">
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class = "backgroundNew">Available For Purchase</div>
+                    </li>
+                    <div class = "heyNew">
+                        <li class="left clearfix maxNew">
+                    <span class="chat-img pull-left"><img src = "images/box.png" alt="User Avatar" class="img-box">
+                            </span>
+                            <div class="chat-body clearfix">
+                                <div class="head">
+                                    <strong style = "color: #fff;" class="primary-font">Denky World Quest</strong>
+                                </div>
+                                <p class = "pDenky">
+                                    Do not let evil get away with it
+                                </p>
+                                <span class = "overlay-postNew">Buy 4.99$</span>
+                            </div>
+                        </li>
+                    </div>
+                </ul>
+            </div>
+        </div>
+        <div id="wrapFifth">
+            <div class = "sidebar-wrapFifth">
+                <ul class="sidebar-nav">
+                    <li class="sidebar-brand">
+                        <div class = "headBrand">
+                            <a class = "a_brandFirst" href="#">
+                                <div class = "brandFirst">
+                                    <div class = "insideBrand">
+                                    </div>
+                                </div>
+                            </a>
+                            <div class = "brandSecond">
+                                <span class = "overlay-header-separator"></span>
+                            </div>
+                            <div class = "brandThird">
+                                <span class = "overlay-titleNewFirst">DENKI WORD QUEST</span>
+                            </div>
+                            <div class = "brandSecond">
+                                <span class = "overlay-header-separator"></span>
+                            </div>
+                            <a id = "closeFifth" href="#">
+                                <div class = "brandForth">
+                                    <div class = "closeInside">
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class = "backgroundNewFirst">SHARE</div>
+                    </li>
+                    <div class = "heyNewSecond">
+                        <a class = "kozelNew" href="http://facebook.com/turbulenz" target="_blank">
+                        <li class="left clearfix maxNewSecond">
+                    <span class="chat-img pull-left"><i style = "margin-top: 17px;" class = "fa fa-facebook-official fa-2x"></i>
+                            </span>
+                            <div class="chat-body clearfix">
+                                <div class="headNew">
+                                    <strong class="primary-font strongToFace">SHARE TO FACEBOOK</strong>
+                                </div>
+                            </div>
+                        </li>
+                            </a>
+                        <a class = "kozelNew" href="https://api.twitter.com/oauth/authenticate?oauth_token=m2nvSgAAAAAAHJlQAAABTpK75EY" target="_blank">
+                        <li class="left clearfix maxNewSecond">
+                    <span class="chat-img pull-left"><i class = "fa fa-twitter-square fa-2x iconFace"></i>
+                            </span>
+                            <div class="chat-body clearfix">
+                                <div class="headNew">
+                                    <strong style = "color: #000; font-size: 18px;" class="primary-font">SHARE TO TWITTER</strong>
+                                </div>
+                            </div>
+                        </li>
+                            </a>
+                        <a class = "kozelNew" href="https://accounts.google.com/ServiceLogin?service=mail&continue=https://mail.google.com/mail/&hl=uk" target="_blank">
+                        <li class="left clearfix maxNewSecond">
+                    <span class="chat-img pull-left"><i class = "fa fa-google-plus-square fa-2x iconFace"></i>
+                            </span>
+                            <div class="chat-body clearfix">
+                                <div class="headNew">
+                                    <strong style = "color: #000; font-size: 18px;" class="primary-font">SHARE TO Google+</strong>
+                                </div>
+                            </div>
+                        </li>
+                            </a>
+                    </div>
+                </ul>
+            </div>
+        </div>
+        <div id="wrapSix">
+            <div class = "sidebar-wrapSix">
+                <ul class="sidebar-nav">
+                    <li class="sidebar-brand">
+                        <div class = "headBrand">
+                            <a class = "a_brandFirst" href="#">
+                                <div class = "brandFirst">
+                                    <div class = "insideBrand">
+                                    </div>
+                                </div>
+                            </a>
+                            <div class = "brandSecond">
+                                <span class = "overlay-header-separator"></span>
+                            </div>
+                            <div class = "brandThird">
+                                <span class = "overlay-title">INFO</span>
+                            </div>
+                            <div class = "brandSecond">
+                                <span class = "overlay-header-separator"></span>
+                            </div>
+                            <a id = "closeSix" href="#">
+                                <div class = "brandForth">
+                                    <div class = "closeInside">
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class = "background">About</div>
+                    </li>
+                    <li class="hi">
+                        <p class = "newText">Denki Word Quest is the new word game from</p>
+                        <p class = "newText">the makers of the award-winning Quarrel</p>
+                    </li>
+                    <li>
+                        <div class = "background">Updates</div>
+                    </li>
+                    <li class="hi">
+                        <p class = "newText">2013-08-01 Game now supports Android play</p>
+                        <p class = "newText">2013-03-02 Now with added shiny</p>
+                    </li>
+                    <li>
+                        <div class = "background">Support</div>
+                    </li>
+                    <li class="hi">
+                        <p class = "newText">If you've found a BUG (10 Points) then please let</p>
+                        <p class = "newText">us know, drop us a line at support@denki.co.uk</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+            <div class = "rightBar">
+                <ul class="nav navbar-nav pull-right">
+                    <li class = "navSec each"><a id = "buttonFirst"></a>
+                    </li>
+                    <li class = "navSec each"><a id = "buttonSecond"></a>
+                    </li>
+                    <li class = "navSec each"><a id = "buttonThird"></a>
+                    </li>
+                    <li class = "navSec each"><a id = "buttonForth"></a>
+                    </li>
+                    <li class = "navSec eachDif"><a id = "buttonFifth"></a>
+                    </li>
+                    <li class="navSec each"><a id = "buttonSix"></a>
+                    </li>
+                    <li class="navSec each"><a id = "buttonSeven" onclick="return toggleFullScreen()"></a>
+                    </li>
+                </ul>
+            </div>
+    <script src="scripts/bootstrap.js"></script>
+    <script src="scripts/script.js"></script>
+    </body>
+    </html>
+
+
+
+
+
+
+
+
