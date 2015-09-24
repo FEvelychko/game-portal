@@ -34,6 +34,309 @@
                 <li><a data-toggle="modal" data-target="#exampleModalSecond">create new account</a></li>
             </ul>
         </div>
+        <div class = "page-content-wrapper">
+            <div class="row">
+                <nav class="navbar navbar-default navbar-fixed-top header">
+                    <div class="navbar-header">
+                        <a class="navbar-brand logo" href="#"></a>
+                        <a id = "buttonBar" class="navbar-brand" href="#"></a>
+                    </div>
+                    <div>
+                        <ul class="nav navbar-nav navbar-rightFirst">
+                            <li>
+                                <a class = "signBlock signButton" data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap">SIGN IN</a>
+                                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal">×</button>
+                                        </div>
+                                        <ul class="nav nav-tabs">
+                                            <li class="active separ"><a data-toggle="pill" href="#home">SING IN</a></li>
+                                            <li class = "separ"><a data-toggle="pill" href="#menu1">NEW USER</a></li>
+                                            <li class = "separ"><a data-toggle="pill" href="#menu2">FORGOT</a></li>
+                                        </ul>
+                                        <!--  SIGN IN  -->
+                                        <div class = "tab-content">
+                                            <div id="home" class="tab-pane fade in active">
+                                                <div class="control-group">
+                                                    <div class = "login-social">
+                                                        <div class = "modal-fb">
+                                                            <i class = "fa fa-facebook fa-lg"></i>
+                                                            sign in
+                                                        </div>
+                                                        <div class = "modal-tw">
+                                                            <i class = "fa fa-twitter fa-lg"></i>
+                                                            sign in
+                                                        </div>
+                                                        <div class = "modal-gg">
+                                                            <i class = "fa fa-google fa-lg"></i>
+                                                            sign in
+                                                        </div>
+                                                    </div>
+                                                    <hr/>
+                                                    <div class = "modal-contents">
+                                                        <form role="form">
+                                                            <div class="form-group">
+                                                                <label class="control-label">sign in</label>
+                                                                <input type="text" class="form-control" placeholder="Username or email" required/>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label class="control-label">password</label>
+                                                                <input type="password" class="form-control" data-minlength="6" placeholder="•••••••••••" required/>
+                                                                <span class="help-block">Minimum of 6 characters</span>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <div class="checkbox">
+                                                                    <label>
+                                                                        <input type="checkbox" data-error="Before you wreck yourself" required checked>
+                                                                        <span class = "span" tabindex="1">keep me signed in</span>
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                            <hr class = "hrSecond"/>
+                                                            <div class="form-group">
+                                                                <button type="submit" class="btn btn-primary">SIGN IN</button>
+                                                            </div>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--  NEW USER  -->
+                                            <div id="menu1" class="tab-pane fade">
+                                                <div class = "login-info">
+                                                    Play using an existing Facebook, Twitter or Google account
+                                                </div>
+                                                <div class = "login-social">
+                                                    <div class = "modal-fb">
+                                                        <i class = "fa fa-facebook fa-lg"></i>
+                                                        sign up
+                                                    </div>
+                                                    <div class = "modal-tw">
+                                                        <i class = "fa fa-twitter fa-lg"></i>
+                                                        sign up
+                                                    </div>
+                                                    <div class = "modal-gg">
+                                                        <i class = "fa fa-google fa-lg"></i>
+                                                        sign up
+                                                    </div>
+                                                </div>
+                                                <hr/>
+                                                <div class = "modal-contents-noborder">
+                                                    <div class = "info-text">
+                                                        Or get started with just a username
+                                                    </div>
+                                                    <div class = "terms-text">
+                                                        I am over 13 and accept the
+                                                    </div>
+                                                </div>
+                                                <div class = "modal-contents-noborder blockPlay">
+                                                    <div class = "username-input">
+                                                        <input type="text" class = "ng-dirty" placeholder="Choose a username"/>
+                                                        <div class = "finished">
+                                                            <span>Let's Play</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <hr/>
+                                            </div>
+                                            <!--  FORGOT  -->
+                                            <div id="menu2" class="tab-pane fade">
+                                                <div class = "login-info-Second">
+                                                    If you forgot your password, enter your email address here and we'll send you a recovery password
+                                                </div>
+                                                <div class = "modal-contents">
+                                                    <form role="form">
+                                                        <div class="form-group">
+                                                            <label class="control-label">email</label>
+                                                            <input type="text" class="form-control" placeholder="Enter your ga.me account email" required/>
+                                                        </div>
+                                                        <hr class = "hrSecond"/>
+                                                        <div class="form-group">
+                                                            <button type="submit" class="btn btn-primary">SEND</button>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li><a class = "gav" href="http://facebook.com/turbulenz" target="_blank"><i class="fa fa-facebook-official fa-2x"></i></a></li>
+                            <li><a class = "gav" href="https://accounts.google.com/ServiceLogin?service=mail&continue=https://mail.google.com/mail/&hl=uk" target="_blank"><i class="fa fa-google-plus-square fa-2x"></i></a></li>
+                            <li><a class = "gav" href="https://api.twitter.com/oauth/authenticate?oauth_token=nuctqwAAAAAAHJlQAAABTpDkNFc" target="_blank"><i class="fa fa-twitter fa-2x"></i></a></li>
+                            <li>
+                                <a data-toggle="modal" data-target="#exampleModalSecond">
+                                    <button class = "btn btn-success">
+                                        SIGN UP
+                                    </button>
+                                </a>
+                                <div class="modal fade" id="exampleModalSecond" tabindex="-1" role="dialog">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal">×</button>
+                                        </div>
+                                        <ul class="nav nav-tabs">
+                                            <li class = "separ"><a data-toggle="pill" href="#homeS">SING IN</a></li>
+                                            <li class="active separ"><a data-toggle="pill" href="#menu1S">NEW USER</a></li>
+                                            <li class = "separ"><a data-toggle="pill" href="#menu2S">FORGOT</a></li>
+                                        </ul>
+                                        <!--  SIGN IN  -->
+                                        <div class = "tab-content">
+                                            <div id="homeS" class="tab-pane fade">
+                                                <div class="control-group">
+                                                    <div class = "login-social">
+                                                        <div class = "modal-fb">
+                                                            <i class = "fa fa-facebook fa-lg" onclick="loadGoogle()"></i>
+                                                            sign in
+                                                        </div>
+                                                        <div class = "modal-tw">
+                                                            <i class = "fa fa-twitter fa-lg"></i>
+                                                            sign in
+                                                        </div>
+                                                        <div class = "modal-gg">
+                                                            <i class = "fa fa-google fa-lg"></i>
+                                                            sign in
+                                                        </div>
+                                                    </div>
+                                                    <hr/>
+                                                    <div class = "modal-contents">
+                                                        <form role="form">
+                                                            <div class="form-group">
+                                                                <label class="control-label">sign in</label>
+                                                                <input type="text" class="form-control" placeholder="Username or email" required/>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label class="control-label">password</label>
+                                                                <input type="password" class="form-control" data-minlength="6" placeholder="•••••••••••" required/>
+                                                                <span class="help-block">Minimum of 6 characters</span>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <div class="checkbox">
+                                                                    <label>
+                                                                        <input type="checkbox" data-error="Before you wreck yourself" required checked>
+                                                                        <span class = "span" tabindex="1">keep me signed in</span>
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                            <hr class = "hrSecond"/>
+                                                            <div class="form-group">
+                                                                <button type="submit" class="btn btn-primary">SIGN IN</button>
+                                                            </div>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--  NEW USER  -->
+                                            <div id="menu1S" class="tab-pane fade in active">
+                                                <div class = "login-info">
+                                                    Play using an existing Facebook, Twitter or Google account
+                                                </div>
+                                                <div class = "login-social">
+                                                    <div class = "modal-fb">
+                                                        <i class = "fa fa-facebook fa-lg"></i>
+                                                        sign up
+                                                    </div>
+                                                    <div class = "modal-tw">
+                                                        <i class = "fa fa-twitter fa-lg"></i>
+                                                        sign up
+                                                    </div>
+                                                    <div class = "modal-gg">
+                                                        <i class = "fa fa-google fa-lg"></i>
+                                                        sign up
+                                                    </div>
+                                                </div>
+                                                <hr/>
+                                                <div class = "modal-contents-noborder">
+                                                    <div class = "info-text">
+                                                        Or get started with just a username
+                                                    </div>
+                                                    <div class = "terms-text">
+                                                        I am over 13 and accept the
+                                                    </div>
+                                                </div>
+                                                <div class = "modal-contents-noborder blockPlay">
+                                                    <div class = "username-input">
+                                                        <input type="text" class = "ng-dirty" placeholder="Choose a username"/>
+                                                        <div class = "finished">
+                                                            <span>Let's Play</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <hr/>
+                                            </div>
+                                            <!--  FORGOT  -->
+                                            <div id="menu2S" class="tab-pane fade">
+                                                <div class = "login-info-Second">
+                                                    If you forgot your password, enter your email address here and we'll send you a recovery password
+                                                </div>
+                                                <div class = "modal-contents">
+                                                    <form role="form">
+                                                        <div class="form-group">
+                                                            <label class="control-label">email</label>
+                                                            <input type="text" class="form-control" placeholder="Enter your ga.me account email" required/>
+                                                        </div>
+                                                        <hr class = "hrSecond"/>
+                                                        <div class="form-group">
+                                                            <button type="submit" class="btn btn-primary">SEND</button>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+            <div class="row">
+                <div class = "landing-splash">
+                    <div class = "landing-bg">
+                        <div class = "landing-characters">
+                            <div class = "splash-buttons">
+                                <a class = "mers" data-toggle="modal" data-target="#exampleModal">
+                                    <span class = "cs-base-invert cs-highlight-lighter-invert cs-hover-target turbulenz-scheme">SIGN IN</span>
+                                </a>
+                                <a class = "mers" data-toggle="modal" data-target="#exampleModalSecond">
+                                    <span class = "cs-base cs-highlight-base-invert cs-hover-target turbulenz-scheme">CREATE A FREE ACCOUNT</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class = "game-grid-tab-links">
+                    <div class = "game-grid-tab-title selected">
+                        All Games
+                    </div>
+                    <div class = "game-grid-tab-title">
+                        Popular Games
+                    </div>
+                </div>
+            </div>
+            <!-- container with 5 items of games -->
+            <div class = "row">
+                <div class = "game-grid-footer game-grid-footer-8">
+                    <a href="" target="_blank">Developers</a>&nbsp;&nbsp;·&nbsp;&nbsp;
+                    <a href="" target="_blank">News</a>&nbsp;&nbsp;·&nbsp;&nbsp;
+                    <a href="" target="_blank">Careers</a>&nbsp;&nbsp;·&nbsp;&nbsp;
+                    <a href="" target="_blank">About</a>&nbsp;&nbsp;·&nbsp;&nbsp;
+                    <a href="" target="_blank">Contact</a>&nbsp;&nbsp;·&nbsp;&nbsp;
+                    <a href="" target="_blank">Terms & Privacy</a>&nbsp;&nbsp;·&nbsp;&nbsp;
+                    <span>© 2014 Turbulenz</span>"&nbsp;&nbsp;
+                    <a href="http://twitter.com/turbulenz" class = "" target="_blank">
+                        <i class = "fa fa-twitter fa-lg">
+                        </i>
+                    </a>
+                    <a href="http://facebook.com/turbulenz" class = "" target="_blank">
+                        <i class = "fa fa-facebook fa-lg">
+                        </i>
+                    </a>
+                </div>
+            </div>
+        </div>
     </div>
     <script src="scripts/bootstrap.js"></script>
     </body>
